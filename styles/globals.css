@@ -1,16 +1,62 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.form-widget {
+  text-align: center;
+  width: 450px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.field {
+  display:flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 16pt;
 }
 
-* {
-  box-sizing: border-box;
+input {
+  margin-left: auto;
+  float: right;
+  background: transparent;
+  border: 1px solid #0D053E;
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow:  1px 3px 3px 1px #CCCCCC;
+  font-size: 13pt;
+  padding-left: 15px;
+}
+
+
+
+.button {
+  background: #4223FF;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 14pt;
+  font-weight: 500;
+  margin-top: 50px;
+
+}
+
+.button:hover {
+  box-shadow:  1px 3px 6px 2px #CCCCCC;
+}
+
+#singout {
+  height: 35px;
+  width: 120px;
+  background: white;
+  color: black;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+
+.sbui-space-col.sbui-space-y-8 {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
 }

@@ -78,57 +78,66 @@ export default function Account({ session }) {
 
   return (
     <div className="form-widget">
-      <div>
+      <div className='field'>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={session.user.email} disabled />
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="first_name">First name</label>
         <input
-          id="first_name" type="text" value={first_name || ''} onChange={(e) => setFirstname(e.target.value)}
-        />
+          id="first_name" 
+          type="text" 
+          placeholder='enter your first name'
+          value={first_name || ''} 
+          onChange={(e) => setFirstname(e.target.value)}
+        ></input>
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="last_name">Last name</label>
         <input
           id="last_name"
           type="text"
+          placeholder='enter your last name'
           value={last_name || ''}
           onChange={(e) => setLastname(e.target.value)}
         />
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="phone">Phone</label>
         <input
           id="phone"
           type="text"
+          placeholder='enter your phone'
           value={phone || ''}
           onChange={(e) => setPhone(e.target.value)}
         />
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="country">Country</label>
         <input
           id="country"
           type="text"
+          placeholder='enter your country'
           value={country || ''}
           onChange={(e) => setCountry(e.target.value)}
         />
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="city">City</label>
         <input
           id="city"
           type="text"
+          placeholder='enter your city'
           value={city || ''}
           onChange={(e) => setCity(e.target.value)}
         />
       </div>
-      <div>
+      <div className='field'>
         <label htmlFor="doc_url">Doc URL</label>
         <input
           id="doc_url"
           type="text"
+          placeholder='enter your doc URL'
           value={doc_url || ''}
           onChange={(e) => setUrl(e.target.value)}
         />
@@ -137,7 +146,7 @@ export default function Account({ session }) {
 
       <div>
         <button
-          className="button block primary"
+          className="button"
           onClick={() => updateProfile({ first_name, last_name, phone, country, city })}
           disabled={loading}
         >
@@ -146,7 +155,7 @@ export default function Account({ session }) {
       </div>
 
       <div>
-        <button className="button block" onClick={() => supabase.auth.signOut()}>
+        <button className="button"  id="singout" onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>
       </div>
