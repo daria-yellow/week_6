@@ -8,9 +8,13 @@ concurrency:
 steps:
 
   - name: "Verify & build"
-    image: node:latest
+    image: node
     commands:
       - npm install
+    when:
+      branch:
+        exclude:
+          - main
 
 
 trigger:
