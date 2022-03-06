@@ -8,13 +8,16 @@ concurrency:
 steps:
 
   - name: "Verify & build"
-    image: node
+    image: node:latest
     commands:
       - npm install
-    when:
-      branch:
-        exclude:
-          - main
+      - npm run build
+
+  - name: "Build docker image"
+    image: plugins/docker
+    repo: dshqq/week_6
+    tags: ${DRONE_COMMIT_SHA:0:7}
+
 
 
 trigger:
