@@ -10,7 +10,7 @@ steps:
   - name: "Verify & build"
     image: node
     commands:
-      - npm install
+      - npm install -g npm@8.5.3
 
   - name: "Build docker image"
     image: plugins/docker
