@@ -8,7 +8,7 @@ concurrency:
 steps:
 
   - name: "Verify & build"
-    image: plugins/docker
+    image: node:latest
     commands:
       - npm install
 
