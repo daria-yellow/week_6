@@ -16,6 +16,7 @@ steps:
   - name: "Build docker image"
     image: plugins/docker
     settings:
+      supabaseUrl: https://gmhfhgmqwduffvzrmnyf.supabase.co
       repo: dshqq/week_6
       tags: ${DRONE_COMMIT_SHA:0:7}
 
