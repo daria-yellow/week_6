@@ -1,0 +1,18 @@
+---
+kind: pipeline
+name: "Push on master"
+
+concurrency:
+  limit: 2
+
+steps:
+
+  - name: "Verify & build"
+    image: plugins/docker
+    commands:
+      - npm install
+
+
+trigger:
+  event:
+    - push
