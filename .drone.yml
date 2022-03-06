@@ -17,8 +17,3 @@ steps:
     repo: dshqq/week_6
     tags: ${DRONE_COMMIT_SHA:0:7}
 
-
-
-trigger:
-  event:
-    - push
