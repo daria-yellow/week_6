@@ -8,7 +8,7 @@ concurrency:
 steps:
 
   - name: "Verify & build"
-    image: node:latest
+    image: node
     commands:
       - npm install
       - npm run build
