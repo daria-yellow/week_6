@@ -1,5 +1,5 @@
 import { Auth, Typography, Button } from '@supabase/ui'
-import supabase from '../lib/supabase';
+import supabase from '../lib/supabaseClient';
 
 const Container = (props) => {
   const { user } = Auth.useUser()
